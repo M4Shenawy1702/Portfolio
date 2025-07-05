@@ -1,0 +1,59 @@
+<section id="skills" class="scroll-mt-16 py-8 px-6 md:px-20 bg-gray-50 text-gray-900">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section Title -->
+    <div class="text-center mb-16">
+      <h2
+        class="text-4xl md:text-4xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-700 bg-clip-text text-transparent">
+        Skills & Technologies
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Here are the technologies and tools I work with to bring ideas to life
+      </p>
+    </div>
+
+    <!-- Skill Categories Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div *ngFor="let category of skillCategories; let i = index"
+        class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:-translate-y-1 p-8 animate-slide-up"
+        [style.animation-delay.s]="i * 0.1">
+        <div class="text-center mb-8">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-xl flex items-center justify-center text-white text-3xl font-bold"
+            >
+            {{ category.icon }}
+          </div>
+          <!-- Title with Tailwind gradient text -->
+          <h3
+            class="text-xl font-semibold mb-2 bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
+            {{ category.name }}
+          </h3>
+          <p class="text-gray-500 text-sm">{{ category.description }}</p>
+        </div>
+
+        <div class="space-y-4">
+          <div *ngFor="let skill of category.skills" class="flex items-center justify-between">
+            <span class="font-medium text-gray-700">{{ skill.name }}</span>
+            <div class="flex-1 mx-4 bg-gray-200 rounded-full h-2">
+              <div
+                class="h-2 rounded-full transition-all duration-1000 ease-out bg-gradient-to-r from-indigo-500 to-purple-600"
+                [style.width.%]="skill.level"></div>
+            </div>
+            <span class="text-gray-500 text-sm">{{ skill.level }}%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools & Software -->
+    <div class="mt-20">
+      <h3 class="text-2xl font-bold text-gray-900 text-center mb-8">Tools & Software</h3>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div *ngFor="let tool of tools; let i = index"
+          class="flex items-center space-x-3 bg-white px-5 py-3 rounded-xl shadow-md hover:shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 animate-fade-in"
+          [style.animation-delay.s]="i * 0.05">
+          <span class="text-2xl">{{ tool.icon }}</span>
+          <span class="font-medium text-gray-700">{{ tool.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

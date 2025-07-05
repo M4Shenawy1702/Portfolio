@@ -1,0 +1,58 @@
+<section id="contact" class="section-padding bg-secondary-50 flex items-center justify-center min-h-screen">
+  <div class="container-padding w-full max-w-4xl">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2
+        class="text-4xl md:text-4xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-700 bg-clip-text text-transparent">
+        Get In Touch
+      </h2>
+      <p class="text-secondary-600 max-w-2xl mx-auto">
+        Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing
+        together!
+      </p>
+    </div>
+
+    <div class="grid gap-12">
+      <!-- Contact Info -->
+      <div class="space-y-8 animate-slide-in" style="animation-delay: 0.2s;">
+        <div>
+          <h3 class="text-2xl font-bold text-secondary-900 mb-6">Let's connect</h3>
+          <p class="text-secondary-600 leading-relaxed mb-8">
+            I'm always open to discussing new opportunities, creative projects, or just having a friendly chat about
+            technology and development.
+          </p>
+        </div>
+
+        <!-- Contact Cards -->
+        <div class="space-y-4">
+          <div *ngFor="let contact of contactInfo; let i = index"
+            class="flex items-start gap-4 p-5 bg-white rounded-xl hover:shadow-md transition-all duration-300 animate-slide-up"
+            [ngStyle]="{ animationDelay: (i * 0.1) + 's' }">
+            <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary-100 text-primary-600 text-xl">
+              <div [innerHTML]="contact.icon"></div>
+            </div>
+            <div>
+              <h4 class="font-semibold text-secondary-900">{{ contact.title }}</h4>
+              <p class="text-secondary-600 text-sm mb-1">{{ contact.subtitle }}</p>
+              <a [href]="contact.link"
+                class="text-primary-600 hover:text-primary-700 font-medium text-sm transition-colors duration-200">
+                {{ contact.value }}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="pt-8">
+          <h4 class="font-semibold text-secondary-900 mb-4">Follow me on</h4>
+          <div class="flex space-x-4">
+            <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank" rel="noopener noreferrer"
+              class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-pink-600 hover:text-primary-600 hover:shadow-md transition-all duration-200 transform hover:scale-105">
+              <div [innerHTML]="social.icon"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

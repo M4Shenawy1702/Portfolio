@@ -1,0 +1,45 @@
+<header class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm border-b border-gray-200">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-0 md:px-0 h-16">
+    <!-- Left: Portfolio title -->
+    <h1 class="text-2xl font-bold gradient-text cursor-default select-none">
+      Portfolio
+    </h1>
+
+    <!-- Desktop Links -->
+    <ul class="hidden md:flex space-x-10 font-semibold text-secondary-600">
+      <li *ngFor="let navItem of navItems">
+        <a [href]="navItem.href" [class.active]="activeHash === navItem.href"
+          class="relative text-lg transition-colors duration-300 hover:text-primary-600 group">
+          {{ navItem.label }}
+          <span
+            class="absolute left-0 bottom-[-4px] h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 w-0 group-hover:w-full"
+            [class.w-full]="activeHash === navItem.href">
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden p-2 rounded-md hover:bg-gray-200 transition" (click)="toggleMobileMenu()"
+      aria-label="Toggle navigation menu" [attr.aria-expanded]="isMobileMenuOpen">
+      <svg *ngIf="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg *ngIf="isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Mobile menu -->
+    <ul *ngIf="isMobileMenuOpen"
+      class="absolute top-full left-0 w-full bg-white shadow-md border-t border-gray-200 md:hidden py-4 px-0 space-y-4 font-semibold text-secondary-600">
+      <li *ngFor="let navItem of navItems">
+        <a [href]="navItem.href" (click)="closeMobileMenu()" class="block text-lg hover:text-primary-600 transition">
+          {{ navItem.label }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

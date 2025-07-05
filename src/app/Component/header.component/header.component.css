@@ -1,0 +1,38 @@
+.gradient-text {
+    background: linear-gradient(to right, #4f46e5, #ec4899);
+    /* example colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.gradient-text:hover {
+    filter: brightness(1.1);
+    transition: filter 0.3s ease;
+}
+
+a.relative {
+    position: relative;
+    display: inline-block;
+}
+
+a.relative span {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(to right, #4f46e5, #ec4899);
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+a.relative:hover span,
+a.relative:focus span {
+    width: 100%;
+}
+
+/* Active link underline */
+a.active span {
+    width: 100%;
+}
