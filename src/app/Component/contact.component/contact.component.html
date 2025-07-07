@@ -26,12 +26,16 @@
         <!-- Contact Cards -->
         <div class="space-y-4">
           <div *ngFor="let contact of contactInfo; let i = index"
-            class="flex items-start gap-4 p-5 bg-white rounded-xl hover:shadow-md transition-all duration-300 animate-slide-up"
+            class="flex items-center gap-4 p-5 bg-white rounded-xl hover:shadow-md transition-all duration-300 animate-slide-up"
             [ngStyle]="{ animationDelay: (i * 0.1) + 's' }">
+
+            <!-- Center icon vertically and horizontally -->
             <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary-100 text-primary-600 text-xl">
               <div [innerHTML]="contact.icon"></div>
             </div>
-            <div>
+
+            <!-- Align text vertically centered -->
+            <div class="flex flex-col justify-center">
               <h4 class="font-semibold text-secondary-900">{{ contact.title }}</h4>
               <p class="text-secondary-600 text-sm mb-1">{{ contact.subtitle }}</p>
               <a [href]="contact.link"
