@@ -20,7 +20,7 @@ export class ProjectsComponent {
       technologies: ['DotNet API', 'JWT Authentication', 'MSQL', 'Stripe', 'Redis'],
       category: 'Web API',
       demo: '#',
-      github: '#'
+      github: 'https://github.com/M4Shenawy1702/E-Commerce.git'
     },
     {
       title: 'Company Management System',
@@ -29,7 +29,7 @@ export class ProjectsComponent {
       technologies: ['DotNet API', 'JWT Authentication', 'MSQL', 'Stripe'],
       category: 'Web API',
       demo: '#',
-      github: '#'
+      github: 'https://github.com/M4Shenawy1702/CompanyManagementSystem.git'
     },
     {
       title: 'Bookify',
@@ -38,7 +38,7 @@ export class ProjectsComponent {
       technologies: ['DotNet MVC', 'HTML/CSS/JS', 'JWT Authentication', 'MSQL', 'Stripe', 'Cloudinary'],
       category: 'Web App',
       demo: '#',
-      github: '#'
+      github: 'https://github.com/M4Shenawy1702/Bookify.web.git'
     },
     {
       title: 'Social Media Platform',
@@ -47,7 +47,7 @@ export class ProjectsComponent {
       technologies: ['DotNet API', 'SignalR', 'Angular', 'JWT Authentication', 'MSQL'],
       category: 'Web API',
       demo: '#',
-      github: '#'
+      github: 'https://github.com/M4Shenawy1702/Social-Media-App.git'
     },
     {
       title: 'Movie Management System',
@@ -56,7 +56,7 @@ export class ProjectsComponent {
       technologies: ['DotNet API', 'JWT Authentication', 'MSQL'],
       category: 'Web API',
       demo: '#',
-      github: '#'
+      github: 'https://github.com/M4Shenawy1702/MoviesManagementSystem.git'
     },
     {
       title: 'School Management System',
@@ -65,7 +65,7 @@ export class ProjectsComponent {
       technologies: ['C#', 'OOP', 'MSQL'],
       category: 'Console App',
       demo: '#',
-      github: '#'
+      github: 'https://github.com/M4Shenawy1702/SchoolManagementSystem.Console.git'
     },
     {
       title: 'Onion API Template',
@@ -74,7 +74,7 @@ export class ProjectsComponent {
       technologies: ['DotNet API', 'JWT Authentication', 'MSQL', 'Fluent Validation', 'Swagger', 'EF Core', 'AutoMapper'],
       category: 'Templates',
       demo: '#',
-      github: '#'
+      github: 'https://github.com/M4Shenawy1702/OnionApiTemplate.git'
     },
     {
       title: 'Diabetic Blindness Detection',
@@ -83,7 +83,7 @@ export class ProjectsComponent {
       technologies: ['DotNet API', 'JWT Authentication', 'MSQL', 'Swagger', 'EF Core', 'AutoMapper'],
       category: 'Web API',
       demo: '#',
-      github: '#'
+      github: 'https://github.com/M4Shenawy1702/Diabetic_blindness_detection.git'
     },
     {
       title: 'Software as a Service (SaaS)',
@@ -92,7 +92,7 @@ export class ProjectsComponent {
       technologies: ['DotNet API', 'JWT Authentication', 'MSQL', 'Swagger', 'EF Core', 'AutoMapper'],
       category: 'Web API',
       demo: '#',
-      github: '#'
+      github: 'https://github.com/M4Shenawy1702/SaaS.git'
     }
   ];
 
