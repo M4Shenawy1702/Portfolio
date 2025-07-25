@@ -57,12 +57,14 @@ export class AboutComponenet {
       description: 'I believe the best solutions come from working together and sharing knowledge.'
     }
   ];
-  downloadResume(): void {
-    const resumeUrl = '/assets/Mostafa Elshenawy CV.pdf';
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'Mostafa Elshenawy CV.pdf';
-    link.click();
-
-  }
+downloadResume(): void {
+  const resumeUrl = '/assets/mostafa-elshenawy-cv.pdf';
+  const link = document.createElement('a');
+  link.href = resumeUrl;
+  link.setAttribute('download', 'mostafa-elshenawy-cv.pdf');
+  link.style.display = 'none';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 }
