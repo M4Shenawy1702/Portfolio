@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
   activeFilter = 'All';
-  filters = ['All', 'Web App', 'Web API', 'Console App', 'Templates'];
+  filters = ['All', 'MVC', 'Web API', 'Console App', 'Templates','Full Stack'];
 
   projects = [
     {
@@ -36,7 +36,7 @@ export class ProjectsComponent {
       description: 'A responsive online booking platform where users can schedule appointments, register/login securely, and admins can manage services and bookings with ease.',
       image: 'https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       technologies: ['DotNet MVC', 'HTML/CSS/JS', 'JWT Authentication', 'MSQL', 'Stripe', 'Cloudinary'],
-      category: 'Web App',
+      category: 'MVC',
       demo: '#',
       github: 'https://github.com/M4Shenawy1702/Bookify.web.git'
     },
@@ -45,7 +45,7 @@ export class ProjectsComponent {
       description: 'A scalable social networking API that supports user authentication, posting, liking, real-time messaging via SignalR, and user profile management.',
       image: 'https://images.unsplash.com/photo-1689004624325-6edf074228dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHNvY2lhbCUyMGFwcHxlbnwwfHwwfHx8MA%3D%3D',
       technologies: ['DotNet API', 'SignalR', 'Angular', 'JWT Authentication', 'MSQL'],
-      category: 'Web API',
+      category: 'Full Stack',
       demo: '#',
       github: 'https://github.com/M4Shenawy1702/Social-Media-App.git'
     },
